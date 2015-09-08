@@ -15,7 +15,7 @@ gulp.task('inject', function() {
   var target = gulp.src('./public/index.html')
 
   var sources = gulp.src(['!./public/bower_components/**/*.js','./public/*.js', './public/**/*.js', './public/*.css', './public/**/*.css'])
-  return target.pipe(inject(sources))
+  return target.pipe(inject(sources, { relative: true }))
     .pipe(gulp.dest('./public'))
 })
 
