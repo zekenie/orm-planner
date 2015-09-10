@@ -1,0 +1,28 @@
+<div class="aside" tabindex="-1" role="dialog">
+<div class="aside-dialog">
+  <div class="aside-content">
+    <div  class="aside-header">
+      <button class="close" type="button" ng-click="$hide()">&times;</button>
+      <h4>Add Table</h4>
+    </div>
+    <div class="aside-body">
+      <form novalidate name="addTableFrm" ng-submit="addTable()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+             ng-model="newTable.name"
+             name="name"
+             type="text"
+             pattern="^\S*$"
+             autofocus
+             required
+             class="form-control">
+        </div>
+        <div>
+          <button type="submit" class="btn pull-right btn-success" ng-disabled="!addTableFrm.$valid">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
