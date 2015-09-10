@@ -1,12 +1,12 @@
 angular.module('ormPlanner')
   .config(function($stateProvider) {
     $stateProvider.state('table', {
-      url: '/tables/:tableId',
+      url: '/tables/{name}',
       controller: 'TableCtrl',
       templateUrl: 'table/table.html',
       resolve: {
         table: function(TableManager, $stateParams) {
-          return TableManager.get($stateParams)
+          return TableManager.get({ name: $stateParams.tableName })
         }
       }
     })
