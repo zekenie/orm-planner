@@ -10,7 +10,7 @@
         <div class="form-group">
           <label for="name">Name</label>
           <input
-             ng-model="newTable.name"
+             ng-model="form.name"
              name="name"
              type="text"
              pattern="^\S*$"
@@ -23,7 +23,7 @@
           <select 
             class="form-control"
             name="extends"
-            ng-model="newTable.extends"
+            ng-model="form.extends"
             ng-options="table as table.name for table in tables">
               <option></option>
             </select>

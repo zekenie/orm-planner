@@ -14,7 +14,7 @@
     
     <link rel="stylesheet" href="components/navbar/navbar.css">
     
-    <link rel="stylesheet" href="table/addTable/addTable.css">
+    <link rel="stylesheet" href="table/form/table.form.css">
     
     <link rel="stylesheet" href="bower_components/angular-hotkeys/build/hotkeys.css">
     
@@ -78,7 +78,7 @@
 
     <div ng-app="ormPlanner" ng-controller="MainCtrl">
       <navbar></navbar>
-      <div ui-view></div>
+      <div class="container-fluid" ui-view></div>
     </div>
 
   <!-- bower:js -->
@@ -105,7 +105,9 @@
 
   <script src="components/navbar/navbar.directive.js"></script>
 
-  <script src="table/addTable/addTable.service.js"></script>
+  <script src="field/form/field.form.service.js"></script>
+
+  <script src="table/form/table.form.service.js"></script>
 
   <!-- endinject -->
   </body>

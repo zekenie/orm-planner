@@ -1,0 +1,38 @@
+<div class="aside" tabindex="-1" role="dialog">
+<div class="aside-dialog">
+  <div class="aside-content">
+    <div  class="aside-header">
+      <button class="close" type="button" ng-click="$hide()">&times;</button>
+      <h4>Add Field</h4>
+    </div>
+    <div class="aside-body">
+      <form novalidate name="addFieldFrm" ng-submit="addField()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+             ng-model="newField.name"
+             name="name"
+             type="text"
+             pattern="^\S*$"
+             autofocus
+             required
+             class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="type">Type</table>
+          <select
+            class="form-control"
+            name="type"
+            ng-model="newField.type"
+            ng-options="type as type.name for type in types">
+              <option></option>
+            </select>
+        </div>
+        <div>
+          <button type="submit" class="btn pull-right btn-success" ng-disabled="!addFieldFrm.$valid">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,6 @@
+<div>
+  <h2>
+    {{ table.name }}
+    <small ng-if="table.extends"> &lt; <a ui-sref="table({name: table.extends.name})">{{ table.extends.name }}</a></small>
+  </h2>
+</div>

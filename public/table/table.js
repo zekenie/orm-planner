@@ -6,7 +6,7 @@ angular.module('ormPlanner')
       templateUrl: 'table/table.html',
       resolve: {
         table: function(TableManager, $stateParams) {
-          return TableManager.get({ name: $stateParams.tableName })
+          return TableManager.get({ name: $stateParams.name })
         }
       }
     })
