@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <button class="btn btn-success pull-right" ng-click="addField()"><i class="fa fa-plus"></i></button>
+    <h4>Fields</h4>
+  </div>
+  <div class="list-group">
+    <field
+      class="list-group-item"
+      ng-repeat="field in table.fields"
+      field="field"></field>
+  </div>
+</div>

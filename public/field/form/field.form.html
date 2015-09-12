@@ -6,11 +6,11 @@
       <h4>Add Field</h4>
     </div>
     <div class="aside-body">
-      <form novalidate name="addFieldFrm" ng-submit="addField()">
+      <form novalidate name="fieldFrm" ng-submit="submit()">
         <div class="form-group">
           <label for="name">Name</label>
           <input
-             ng-model="newField.name"
+             ng-model="data.name"
              name="name"
              type="text"
              pattern="^\S*$"
@@ -23,13 +23,13 @@
           <select
             class="form-control"
             name="type"
-            ng-model="newField.type"
+            ng-model="data.type"
             ng-options="type as type.name for type in types">
               <option></option>
             </select>
         </div>
         <div>
-          <button type="submit" class="btn pull-right btn-success" ng-disabled="!addFieldFrm.$valid">Add</button>
+          <button type="submit" class="btn pull-right btn-success" ng-disabled="!fieldFrm.$valid">Add</button>
         </div>
       </form>
     </div>

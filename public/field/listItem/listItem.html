@@ -1,0 +1,16 @@
+<div class="row">
+  <strong class="col-sm-2">{{ field.name }}</strong>
+  <div
+    class="col-sm-3">
+      <a
+        ng-show="field.validations.length"
+        bs-tooltip
+        data-title="{{ field.validations.join(', ') }}">{{ field.validations.length }} validations</a>
+  </div>
+  <div class="col-sm-3"><span class="label label-primary">{{ field.type }}</span></div>
+  <div class="col-sm-4">
+    <a class="pull-right" ng-click="remove()">
+      <i class="fa fa-remove"></i>
+    </a>
+  </div>
+</div>

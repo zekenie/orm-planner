@@ -1,0 +1,25 @@
+angular.module('ormPlanner')
+  .value('FieldOptions', [
+    'String',
+    'Char',
+    'Text',
+    'Integer',
+    'Bigint',
+    'Float',
+    'Real',
+    'Double',
+    'Decimal',
+    'Boolean',
+    'Time',
+    'Date',
+    'Date Only',
+    'HStore',
+    'JSON',
+    'JSONB',
+    'Blob',
+    'Range',
+    'UUID',
+    'Virtual',
+    'Enum',
+    'Array'
+  ])

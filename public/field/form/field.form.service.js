@@ -3,7 +3,8 @@ angular.module('ormPlanner')
   return function(params) {
     var aside = $aside({
       controller: function($scope) {
-        $scope.addField = params.onSubmit
+        $scope.data = {}
+        $scope.submit = params.onSubmit.bind(this, $scope.data)
       },
       templateUrl: 'field/form/field.form.html',
       backdrop: true,
